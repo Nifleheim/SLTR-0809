@@ -1,0 +1,6 @@
+version: "3.9" 
+services: 
+  testing:  
+    ports: 
+      -  8000:5000 
+    image: ikanpaus/simplepapptest:1.0.0 #Simple Python Webapp Test
