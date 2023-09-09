@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: testing 
+  name: testing 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: testing 
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: testing 
+    spec:
+      containers:
+      - image: ikanpaus/simplepapptest:1.0.0 
+        name: testing 
+        ports:
+        - containerPort: 5000 
+        envFrom: 
+          - configMapRef: 
+              name: py-cmap   
+          - secretRef: 
+              name: py-secret 
+        resources: {}
+status: {}
