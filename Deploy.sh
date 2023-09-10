@@ -2,7 +2,6 @@
 sudo apt-get update -y
 sudo apt install python3 -y
 sudo apt install python3-pip -y
-sudo pip install flask -y
 sudo curl -fsSL https://get.docker.com -o get-docker.sh
 sudo sh ./get-docker.sh --dry-run
 sudo apt-get update -y
