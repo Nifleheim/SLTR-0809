@@ -1,18 +1,16 @@
 name: "Docker Build Push"
 
 on:
-  push:
-    branches: ['main']
   workflow_dispatch:
     inputs:
       first:
         description: 'First Tag Version'
-        required: true
         default: '1.0.1'
+        required: true
       latest:
         description: 'Latest Tag Version'
-        required: true
         default: 'latest'
+        required: true
 
 jobs:
     push_to_registry:
