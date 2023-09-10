@@ -16,8 +16,10 @@ jobs:
             password: ${{ secrets.DOCKER_PASSWORD }}
             image: ${{ secrets.DOCKER_IMAGE }}
         - name: Docker build
-          run: "docker build -t ${{ secrets.DOCKER_USERNAME }}/${{ secrets.DOCKER_IMAGE }}:1.0.1 -t ${{ secrets.DOCKER_USERNAME }}/${{ secrets.DOCKER_IMAGE }}:latest ."
-          shell: bash
+          run: |
+            docker build -t ${{ secrets.DOCKER_USERNAME }}/${{ secrets.DOCKER_IMAGE }}:1.0.1 -t ${{ secrets.DOCKER_USERNAME }}/${{ secrets.DOCKER_IMAGE }}:latest .
+         
         - name: Docker push
-          run: "docker push --all-tags ${{ secrets.DOCKER_USERNAME }}/${{ secrets.DOCKER_IMAGE }}"
-          shell: bash
+          run: |
+            docker push --all-tags ${{ secrets.DOCKER_USERNAME }}/${{ secrets.DOCKER_IMAGE }}
+          
