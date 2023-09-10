@@ -1,9 +1,15 @@
 name: "Docker Build Push"
 description: "Build and push Docker image"
+
 branding:
   icon: "upload-cloud"
   color: "blue"
 author: "Ross MacLean"
+
+on:
+  push:
+    branches: ['main']
+
 inputs:
   docker-user:
     description: "Docker user to use when uploading container"
@@ -17,6 +23,7 @@ inputs:
   version:
     description: "1.0.1"
     required: true
+
 runs:
   using: composite
   steps:
