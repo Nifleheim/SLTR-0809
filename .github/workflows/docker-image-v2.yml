@@ -24,7 +24,8 @@ inputs:
     description: "1.0.1"
     required: true
 
-runs:
+jobs:
+  runs-on: ubuntu-latest
   using: composite
   steps:
     - name: Print version
