@@ -1,10 +1,4 @@
 name: "Docker Build Push"
-description: "Build and push Docker image"
-
-branding:
-  icon: "upload-cloud"
-  color: "blue"
-author: "Ross MacLean"
 
 on:
   push:
