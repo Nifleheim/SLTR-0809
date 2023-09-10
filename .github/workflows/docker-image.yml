@@ -15,7 +15,7 @@ jobs:
       - name: Build and push Docker image
         uses: mr-smithers-excellent/docker-build-push@v4
         with:
-          image: ikanpaus/simplepapptest:1.0.0
+          image: ikanpaus/simplepapptest
           registry: docker.io
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
